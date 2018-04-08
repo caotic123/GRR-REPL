@@ -410,7 +410,7 @@ end
 
 
 for i=6, 9 do
- ui_[2].session:setValue(example[i-5])
+ui_[i]:addEventListener('click', (function(e) ui_[2].session:setValue(example[i-5]) end))
 end
 
 ui_[1]:addEventListener('click', function(e)
