@@ -408,21 +408,10 @@ function g_m(c, __p)
     return true
 end
 
-ui_[6]:addEventListener('click', function(e)
-     ui_[2].session:setValue(example[1])
-end)
 
-ui_[7]:addEventListener('click', function(e)
-     ui_[2].session:setValue(example[2])
-end)
-
-ui_[8]:addEventListener('click', function(e)
-     ui_[2].session:setValue(example[3])
-end)
-
-ui_[9]:addEventListener('click', function(e)
-     ui_[2].session:setValue(example[4])
-end)
+for i=6, 9 do
+ ui_[2].session:setValue(example[i-5])
+end
 
 ui_[1]:addEventListener('click', function(e)
    thread = coroutine.create(function() return g_m(ui_[2]:getValue(), true) end)
@@ -437,7 +426,7 @@ ui_[5]:addEventListener('click', function(e)
 end)
 
 ui_[3]:addEventListener('click', function(e)
-      coroutine.resume(thread)
+     if (thread) then coroutine.resume(thread) end
 end)
 
 </script>
