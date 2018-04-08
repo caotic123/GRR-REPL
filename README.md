@@ -5,6 +5,7 @@ https://caotic123.github.io/GRR-REPL/
 
 Api(s):
 ```
+Lua.vm.js
 PureCss
 Ace Editor
 ```
