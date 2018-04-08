@@ -8,4 +8,5 @@ Api(s):
 Lua.vm.js
 PureCss
 Ace Editor
+Typewriter JS
 ```
